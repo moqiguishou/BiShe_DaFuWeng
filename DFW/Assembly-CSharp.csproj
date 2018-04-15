@@ -46,7 +46,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Resources\Scripts\DataPool\Global.cs" />
+     <Compile Include="Assets\Resources\Scripts\Init_Map.cs" />
+     <Compile Include="Assets\Resources\Scripts\Map_Object\Obj_GeZi.cs" />
      <Compile Include="Assets\Resources\Scripts\test.cs" />
+     <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/MOQI/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -67,6 +71,9 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/MOQI/unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
