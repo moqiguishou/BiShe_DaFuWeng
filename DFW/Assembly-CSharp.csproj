@@ -46,11 +46,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\FairyGUI\CopyPastePatch.cs" />
      <Compile Include="Assets\Resources\Scripts\DataPool\Global.cs" />
+     <Compile Include="Assets\Resources\Scripts\DeFine\DeFine.cs" />
      <Compile Include="Assets\Resources\Scripts\Init_Map.cs" />
      <Compile Include="Assets\Resources\Scripts\Map_Object\Obj_GeZi.cs" />
+     <Compile Include="Assets\Resources\Scripts\Sockets\Client_socket.cs" />
+     <Compile Include="Assets\Resources\Scripts\UI_Script\UI_root.cs" />
      <Compile Include="Assets\Resources\Scripts\test.cs" />
      <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+     <None Include="Assets\FairyGUI\Resources\Shaders\AddOn\FairyGUI-BlurFilter.shader" />
+     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
+     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
+     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-BMFont.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/MOQI/unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -74,6 +83,12 @@
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="FairyGUI">
+ <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/Plugins/FairyGUI.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/Plugins/DOTween.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
