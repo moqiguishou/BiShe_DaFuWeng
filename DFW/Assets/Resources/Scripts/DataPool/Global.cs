@@ -17,7 +17,7 @@ public class Global_value {
 
     //服务端IP port
     public static int Port = 8888; //端口
-    public static string IpAddress = "127.0.0.1";//IP地址
+    public static string IpAddress = "192.168.177.128";//IP地址
 }
 
 //发送登录信息 对象

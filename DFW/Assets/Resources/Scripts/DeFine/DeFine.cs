@@ -16,5 +16,6 @@ public class DeFine{
         int port = Global_value.Port;
 
         Client_socket c_client = new Client_socket(ip_address, port);
+        c_client.client_send(json_str);
     }
 }

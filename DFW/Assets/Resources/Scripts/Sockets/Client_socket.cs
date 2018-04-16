@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 public class Client_socket{
     string ip_address = "";
@@ -20,6 +21,7 @@ public class Client_socket{
         try
         {
             c_socket.Connect(ipe);
+            //client_recive();
         }
         catch (System.Exception)
         {
@@ -30,5 +32,26 @@ public class Client_socket{
 
     private void connect_fail()
     {
+    }
+
+    public void client_send(string json_str) {
+        byte[] send_byte = Encoding.ASCII.GetBytes(json_str);
+        c_socket.Send(send_byte);
+
+        //接收消息
+        string recStr = "";
+        byte[] recBytes = new byte[1024];
+        int bytes = c_socket.Receive(recBytes);
+        recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
+        Debug.Log(recStr);
+    }
+
+    public void client_recive() {
+        ////接收消息
+        //string recStr = "";
+        //byte[] recBytes = new byte[1024];
+        //int bytes = c_socket.Receive(recBytes);
+        //recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
+        //Debug.Log(recStr);
     }
 }
