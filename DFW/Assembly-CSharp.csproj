@@ -81,14 +81,14 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/MOQI/unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
+ <Reference Include="DOTween">
+ <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/Plugins/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="FairyGUI">
  <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/Plugins/FairyGUI.dll</HintPath>
  </Reference>
- <Reference Include="DOTween">
- <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/Plugins/DOTween.dll</HintPath>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>D:/MOQI/project/Final_BeShe_DaFuWeng/BiShe_DaFuWeng/DFW/Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

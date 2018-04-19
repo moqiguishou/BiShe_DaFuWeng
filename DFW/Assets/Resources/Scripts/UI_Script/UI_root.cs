@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using FairyGUI;
 using System;
+using System.Net;
+using System.Net.Sockets;
 
 public class UI_root : MonoBehaviour {
     GComponent com_main; //主界面
@@ -23,6 +25,9 @@ public class UI_root : MonoBehaviour {
     GTextInput input_password;
 
     //====================================================//
+    Socket client_socket;
+    Client_socket my_client;
+
     string user_name = "";
     string password = "";
 
@@ -32,6 +37,10 @@ public class UI_root : MonoBehaviour {
         init_button();
         init_controller();
         init_input();
+        //一开始就创建client
+        client_socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        my_client = new Client_socket(client_socket);
+        my_client.client_connet();
     }
 
     private void init_input()
@@ -88,10 +97,9 @@ public class UI_root : MonoBehaviour {
         user_name = input_user_name.text;
         password = input_password.text;
         Debug.Log("name:" + user_name + "password:" + password);
-        Object_login o_login = new Object_login();
-        o_login.user_name = user_name;
-        o_login.password = password;
-        o_login.object_login_Send();
+
+        string toJson = "{\"user_name\":\"" + user_name + "\",\"password\":\"" + password + "\"}";
+        my_client.client_send(toJson);
     }
 
     //返回三选界面
@@ -129,6 +137,14 @@ public class UI_root : MonoBehaviour {
         {
             login_registe.SetSelectedIndex(1);
         }
+    }
+
+    public Socket get_client() {
+        return client_socket;
+    }
+
+    public void close_client() {
+        client_socket.Close();
     }
     // Update is called once per frame
     void Update () {

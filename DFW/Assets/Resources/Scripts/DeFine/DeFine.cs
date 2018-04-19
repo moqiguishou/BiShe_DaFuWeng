@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using System.Net;
+using System.Net.Sockets;
 
 public class DeFine{
     public static void rwLoadScene(int sceneId) {
@@ -15,7 +17,8 @@ public class DeFine{
         string ip_address = Global_value.IpAddress;
         int port = Global_value.Port;
 
-        Client_socket c_client = new Client_socket(ip_address, port);
-        c_client.client_send(json_str);
+        UI_root ui = new UI_root();
+        Socket c_socket = ui.get_client();
+        
     }
 }
