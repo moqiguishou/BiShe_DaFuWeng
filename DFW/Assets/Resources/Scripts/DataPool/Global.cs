@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class Global_GeZi
@@ -22,12 +24,32 @@ public class Global_value {
 
 //发送登录信息 对象
 public class Object_login {
-    public string user_name { set; get; }
-    public string password { set; get; }
+    public string user_name;
+    public string password;
+    public string type;
 
-    public void object_login_Send() {
-        string toJson = "{\"user_name\":\"" + user_name + "\",\"password\":\"" + password+"\"}";
-        Debug.Log(toJson);
-        DeFine.rwSendMessage(toJson);
+    public Object_login(string name,string password,string type) {
+        this.user_name = name;
+        this.password = password;
+        this.type = type;
     }
+}
+
+//发送房间选择 对象
+public class Object_begin_room {
+    public string type = "begin_room";
+
+}
+
+
+
+
+//public delegate void link_func();
+public class Object_recive {
+    public string type;
+    public string result;
+
+    public string user_name;
+    public string user_id;
+    public int level;
 }

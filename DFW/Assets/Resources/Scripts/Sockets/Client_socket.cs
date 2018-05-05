@@ -59,12 +59,12 @@ public class Client_socket{
         byte[] send_byte = Encoding.ASCII.GetBytes(json_str);
         c_socket.Send(send_byte);
 
-        //接收消息
-        string recStr = "";
-        byte[] recBytes = new byte[1024];
-        int bytes = c_socket.Receive(recBytes);
-        recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
-        Debug.Log(recStr);
+        ////接收消息
+        //string recStr = "";
+        //byte[] recBytes = new byte[1024];
+        //int bytes = c_socket.Receive(recBytes);
+        //recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
+        //Debug.Log(recStr);
     }
 
     public void client_recive() {
@@ -74,5 +74,9 @@ public class Client_socket{
         //int bytes = c_socket.Receive(recBytes);
         //recStr += Encoding.ASCII.GetString(recBytes, 0, bytes);
         //Debug.Log(recStr);
+    }
+
+    public Socket _socket() {
+        return c_socket; 
     }
 }

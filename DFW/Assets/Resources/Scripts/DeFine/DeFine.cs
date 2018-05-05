@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using System.Net;
 using System.Net.Sockets;
+using UnityEngine;
+using Newtonsoft.Json;
 
 public class DeFine{
     public static void rwLoadScene(int sceneId) {
@@ -12,13 +14,11 @@ public class DeFine{
         }
     }
 
-    public static void rwSendMessage(string json_str)
-    {
-        string ip_address = Global_value.IpAddress;
-        int port = Global_value.Port;
 
-        UI_root ui = new UI_root();
-        Socket c_socket = ui.get_client();
-        
-    }
+    //GameObject ui;
+    //public void init_ui() {
+    //    ui = GameObject.Find("UI");
+    //}
+
+    
 }
